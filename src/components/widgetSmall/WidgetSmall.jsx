@@ -32,11 +32,11 @@ const WidgetSmall = () => {
 
   return (
     <div className="widgetSmall">
-      <span className="widgetSmallTitle">New Members</span>
+      <h3 className="widgetSmallTitle">New Members</h3>
       <ul className="widgetSmallList">
-        {users.map((user) => {
+        {users.map((user, index) => {
           return (
-            <li className="widgetSmallListItem">
+            <li key={index} className="widgetSmallListItem">
               <img src={user.img} alt="" className="widgetSmallImg" />
               <div className="widgetSmallUser">
                 <span className="widgetSmallUsername">{user.userName}</span>
